@@ -3,13 +3,43 @@ import React, { useRef } from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
-import { FaDownload, FaLocationArrow } from "react-icons/fa";
+import {
+  FaDownload,
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaLocationArrow,
+} from "react-icons/fa";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import profilePic from "../assets/images/Component 1.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import Link from "next/link";
+// socila links
+const social = [
+  {
+    name: "Facebook",
+    icon: <FaFacebook></FaFacebook>,
+    url: "https://www.facebook.com/sayid.hasan.560",
+  },
+  {
+    name: "Email",
+    icon: <FaEnvelope></FaEnvelope>,
+    url: "mailto:syedhasanmohammad@gmail.com",
+  },
+  {
+    name: "Github ",
+    icon: <FaGithub></FaGithub>,
+    url: "https://github.com/sayid-hasan",
+  },
+  {
+    name: "LinkDn",
+    icon: <FaLinkedin></FaLinkedin>,
+    url: "https://www.linkedin.com/in/mohammed-syed-hasan",
+  },
+];
 const Hero = () => {
   const container = useRef(null);
   gsap.registerPlugin(useGSAP);
@@ -103,6 +133,20 @@ const Hero = () => {
                 ></MagicButton>
               </a>
             </div>
+          </div>
+          {/* social */}
+          <div className=" flex justify-center gap-5  md:justify-start items-center py-3 mt-4 lg:w-full">
+            {social.map((item, ind) => (
+              <div key={ind} className="btn__group">
+                {" "}
+                <Link
+                  href={item.url}
+                  className=" w-12 h-12 border-[1px] border-[#8750f7] rounded-full flex justify-center items-center text-[#8750f7] text-lg hover:bg-[#8750f7] hover:text-white  social__button "
+                >
+                  {item.icon}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
         {/* image/photo */}
