@@ -125,7 +125,11 @@ const Hero = () => {
                   position="left"
                 ></MagicButton>
               </a>
-              <a href="#project">
+              <a
+                href="https://docs.google.com/document/d/1krGrvW1JpOpXv7olJlCQBev0IY28UBf8zjeBOVaRR6Q/export?format=pdf"
+                download="syed_Hasan_CV.pdf"
+                target="_blank"
+              >
                 <MagicButton
                   title={"Download CV"}
                   icon={<FaDownload />}
