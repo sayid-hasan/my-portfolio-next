@@ -74,11 +74,11 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full btn flex justify-center items-center gap-2 border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl">
           <span>
             <Link
               href={"mailto:syedhasanmohammad@gmail.com"}
-              className="btn flex justify-center items-center gap-2 border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl"
+              className=" flex justify-center items-center gap-2"
             >
               {" "}
               Hire me <FaArrowUpRightFromSquare />

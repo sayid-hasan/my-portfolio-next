@@ -19,7 +19,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[8.5rem] grid-cols-1  md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[9rem] grid-cols-1  md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -66,7 +66,12 @@ export const BentoGridItem = ({
           "linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(59,59,68,1) 26%, rgba(93,108,111,1) 100%",
       }}
     >
-      <div className={`${id === 6 && "flex  justify-center "} h-full `}>
+      <div
+        className={`${
+          id === 6 &&
+          "flex flex-col gap-1  justify-center items-center box-border"
+        } h-full `}
+      >
         {/* id 1 AND 5 */}
         <div className="w-full h-full absolute top-0 left-0 ">
           {img && (
@@ -94,7 +99,7 @@ export const BentoGridItem = ({
         {/* for id ==6  animated  bg from acertinity ui */}
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="flex justify-center items-center z-10 absolute text-white-100 font-bold"></div>
+            <div className="flex justify-center items-center z-10 absolute top-0 left-0 text-white-100 font-bold"></div>
           </BackgroundGradientAnimation>
         )}
         {/*inside content card */}
@@ -110,9 +115,9 @@ export const BentoGridItem = ({
           </div>
           {/* title */}
           <div
-            className={`font-sans font-bold group-hover/bento:translate-x-2 text-lg lg:text-3xl max-w-96 z-10 tracking-[1px] transition duration-200  ${
-              id === 4 && "md:absolute"
-            }`}
+            className={`font-sans font-bold group-hover/bento:translate-x-2 text-lg md:text-2xl lg:text-2xl max-w-96 z-10 tracking-[1px] transition duration-200  ${
+              id === 4 && "md:absolute top-5 "
+            } ${id === 6 && "md:text-xl  relative lg:top-5 md:top-3 "}`}
           >
             {title}
           </div>
@@ -149,8 +154,8 @@ export const BentoGridItem = ({
           )}
           {/* /* for id 6 to copy our email to viewer */}
           {id === 6 && (
-            <div className="mt-5 relative group-hover/bento:translate-x-2 transition duration-200 ">
-              <div className="absolute -bottom-5 right-0 ">
+            <div className="mt-5  relative  md:mt-0 md:mb-5 group-hover/bento:translate-x-2 transition duration-200 ">
+              <div className="absolute bottom-10 right-0 ">
                 <Lottie
                   options={{
                     loop: copied,
