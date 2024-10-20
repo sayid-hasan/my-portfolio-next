@@ -3,18 +3,10 @@ import { skill } from "@/data/ProjectsData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
-import Lottie from "react-lottie";
+
 import { BackgroundGradient } from "../ui/BackgroundGradient";
 
 const Skills = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: Animation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {

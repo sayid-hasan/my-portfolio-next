@@ -1,11 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -17,7 +12,7 @@ export const FloatingNav = ({
 }: {
   navItems: {
     name: string;
-    link: string;
+    link?: string;
     icon?: JSX.Element;
   }[];
   className?: string;
@@ -44,7 +39,7 @@ export const FloatingNav = ({
   });
 
   return (
-    <AnimatePresence mode="wait">
+    <div>
       <motion.div
         initial={{
           opacity: 1,
@@ -87,6 +82,6 @@ export const FloatingNav = ({
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button>
       </motion.div>
-    </AnimatePresence>
+    </div>
   );
 };

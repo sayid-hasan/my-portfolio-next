@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const menu = [
   { name: "About" },
-  { name: "Services" },
+
   { name: "Skill" },
   { name: "Projects" },
 
@@ -48,8 +48,6 @@ const Footer = () => {
               activeClass="active"
               className="tab__item relative px-3 py-5 font-semibold text-lg cursor-pointer transition-all duration-500 hover:text-[#8750fd] "
               href={`/#${list.name.toLowerCase()}`}
-
-              // onClick={() => setShowDrawer(!showDrawer)}
             >
               {list.name}
             </Link>

@@ -7,7 +7,28 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaHome } from "react-icons/fa";
 import Footer from "../components/Footer/Footer";
 
-const navItems = [{ name: "Home", link: "/", icon: <FaHome></FaHome> }];
+import { BiSolidContact } from "react-icons/bi";
+import { GrTechnology } from "react-icons/gr";
+import { FcAbout } from "react-icons/fc";
+import { GoProjectSymlink } from "react-icons/go";
+
+const navItems = [
+  { name: "Home", link: "/", icon: <FaHome></FaHome> },
+  { name: "About", link: "/#about", icon: <FcAbout /> },
+
+  { name: "Skill", link: "/#skill", icon: <GrTechnology /> },
+  {
+    name: "Projects",
+    link: "/#projects",
+    icon: <GoProjectSymlink />,
+  },
+
+  {
+    name: "Contact",
+    link: "/#contact",
+    icon: <BiSolidContact></BiSolidContact>,
+  },
+];
 
 export default function Home() {
   return (

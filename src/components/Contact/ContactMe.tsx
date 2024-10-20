@@ -3,17 +3,17 @@ import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineDoubleArrow, MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 
+import "./contactMe.css";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Link from "next/link";
-import "./contactMe.css";
 
 const ContactMe = () => {
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
   const [senderMessage, setSenderMessage] = useState("");
-  const handleSendEmail = async (e) => {
+  const handleSendEmail = async (e: any) => {
     e.preventDefault();
     console.log(process.env.VITE_SERVICE_ID);
     const data = {
@@ -52,17 +52,17 @@ const ContactMe = () => {
   return (
     <div
       id="contact"
-      className="font-oswald tracking-[1px] my-5 bg-[#111111] max-w-7xl mx-auto md:px-5 px-3 py-4 md:py-8 rounded-md
+      className="font-oswald tracking-[1px]  bg-[#111111] max-w-7xl mx-auto md:px-5 px-3 py-4 md:py-8 rounded-md
       "
     >
       <div className="flex justify-center mb-8">
-        <div className=" text-center primary__title text-purple my-3 text-4xl md:text-[55px] leading-[95px]  md:px-6 w-fit tracking-[2px] hover__underline">
+        <div className=" text-center primary__title text-purple  text-4xl md:text-[55px] leading-[95px]  md:px-6 w-fit tracking-[2px] hover__underline">
           Contact Me
         </div>
       </div>
       <div className=" flex flex-col md:flex-row md:justify-between gap-5">
         <div className="section__header flex-1">
-          <div className="text__muted description font-Poppins text-base">
+          <div className="text__muted description tracking-[2px] text-base">
             <span className="block font-bold primary__title md:text-2xl text-lg">
               Ready to Elevate Your Digital Projects?
             </span>
@@ -87,11 +87,11 @@ const ContactMe = () => {
                 <MdOutlineEmail></MdOutlineEmail>
               </div>
               <h3>Email</h3>
-              <h5 className="mb-3">syedhasanmohammad@gmail.com</h5>
+              <h5>syedhasanmohammad@gmail.com</h5>
               <Link
                 target="_blank"
                 href="mailto:syedhasanmohammad@gmail.com"
-                className="btn rounded-full border-none  transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl w-full py-2 px-4 mt-4"
+                className="btn rounded-full w-full px-4 py-2 border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl mt-4"
               >
                 Send a Message
               </Link>
@@ -106,7 +106,7 @@ const ContactMe = () => {
               <Link
                 target="_blank"
                 href="http://m.me/profile?id=sayid.hasan.560"
-                className="btn rounded-full border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl px-4 py-2 mt-4"
+                className="btn rounded-full w-full px-4 py-2 border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl mt-4"
               >
                 Send a Message
               </Link>
@@ -121,7 +121,7 @@ const ContactMe = () => {
               <Link
                 target="_blank"
                 href="https://wa.me/+971544207896"
-                className="btn rounded-full border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl  px-4 py-2 mt-4"
+                className="btn rounded-full w-full px-4 py-2 border-none outline-none transition-all duration-1000 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl mt-4"
               >
                 Send a Message
               </Link>
@@ -156,7 +156,7 @@ const ContactMe = () => {
             ></textarea>
             <button
               type="submit"
-              className="btn px-2 py-2 border-none outline-none transition-all duration-300 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl rounded-full"
+              className="btn px-4 py-2 rounded-full border-none outline-none transition-all duration-300 bg-gradient-to-tr from-[#1c1405c5] to-[#8750f7] hover:bg-gradient-to-bl"
             >
               Send Message
             </button>

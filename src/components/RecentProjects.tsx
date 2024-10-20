@@ -1,10 +1,31 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projects } from "@/data/ProjectsData";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
 const RecentProjects = () => {
+  const container = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const el = container.current;
+    gsap.fromTo(
+      ".projects-container",
+      {
+        scale: 0.7,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: el,
+          scrub: true,
+        },
+      }
+    );
+  }, []);
   return (
-    <div className="py-20">
+    <div className="py-20 projects-container" id="projects" ref={container}>
       <h1 className="heading">
         A small portion of my works <br />
         <span className="text-purple">Recent Projects</span>
