@@ -1,0 +1,38 @@
+#contact .contact__option {
+  border-radius: 10px;
+  background: #b4b9bc19;
+  border: 1px solid #83868726;
+  transition: background 200ms, border 200ms;
+  padding: 1.2rem;
+  text-align: center;
+}
+#contact .contact__option:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #b4b9bc19;
+  border: 1px solid #83868726;
+  resize: none;
+  color: var(--color-white);
+}
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #8750f7 !important;
+}
+@media (max-width: 768px) {
+  #contact .contact__group {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  #contact .contact__group {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

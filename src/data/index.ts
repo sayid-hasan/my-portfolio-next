@@ -49,7 +49,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title:
+      "Currently Esploring NextJs Typescript, AWS , Prisma, PostgreSQL , Mongoose , Docker",
     description: "The Inside Scoop",
     className: " col-span-1 md:col-span-3 lg:col-span-4 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",

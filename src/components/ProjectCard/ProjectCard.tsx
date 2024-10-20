@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineShareAlt } from "react-icons/ai";
+
 import "./projectcard.css";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectCard = ({
   title,
@@ -17,6 +18,7 @@ const ProjectCard = ({
   data: {
     description: string;
     demoLink: string;
+    githubLink: string;
   };
   stack: Array<{
     name: string;
@@ -114,9 +116,12 @@ const ProjectCard = ({
             >
               Demo
             </Link>
-            <div className="btn__share border-[1px] border-transparent transition-all duration-300 w-[2.5rem] flex justify-center items-center aspect-square rounded-full hover:bg-[#b4b9bc19] hover:border-[#83868726]">
-              <AiOutlineShareAlt></AiOutlineShareAlt>
-            </div>
+            <Link
+              href={data?.githubLink}
+              className="btn__share border-[1px] border-transparent transition-all duration-300 w-[2.5rem] flex justify-center items-center aspect-square rounded-full hover:bg-[#b4b9bc19] hover:border-[#83868726]"
+            >
+              <FaGithub></FaGithub>
+            </Link>
           </div>
         </div>
       </div>

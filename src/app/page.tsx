@@ -1,8 +1,11 @@
+import ContactMe from "@/components/Contact/ContactMe";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
+import Skills from "@/components/Skills/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaHome } from "react-icons/fa";
+import Footer from "../components/Footer/Footer";
 
 const navItems = [{ name: "Home", link: "/", icon: <FaHome></FaHome> }];
 
@@ -14,6 +17,9 @@ export default function Home() {
         <Hero></Hero>
         <Grid />
         <RecentProjects />
+        <Skills />
+        <ContactMe />
+        <Footer />
       </div>
     </main>
   );
