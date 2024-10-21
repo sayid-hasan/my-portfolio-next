@@ -56,7 +56,18 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [
+    blendingValue,
+    firstColor,
+    fourthColor,
+    fifthColor,
+    gradientBackgroundEnd,
+    gradientBackgroundStart,
+    secondColor,
+    thirdColor,
+    size,
+    pointerColor,
+  ]);
 
   useEffect(() => {
     function move() {
@@ -71,7 +82,7 @@ export const BackgroundGradientAnimation = ({
     }
 
     move();
-  }, [tgX, tgY]);
+  }, [tgX, tgY, curX, curY]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
@@ -85,6 +96,11 @@ export const BackgroundGradientAnimation = ({
   useEffect(() => {
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
   }, []);
+
+  // bug fix
+  const isClient = typeof window !== "undefined";
+
+  if (!isClient) return null;
 
   return (
     <div

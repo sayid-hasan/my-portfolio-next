@@ -75,6 +75,10 @@ const Hero = () => {
     },
     { scope: container }
   );
+  // bug fix
+  const isClient = typeof window !== "undefined";
+
+  if (!isClient) return null;
   return (
     <div className="pb-20 pt-36 " ref={container}>
       {/* SPOTLIGHT */}

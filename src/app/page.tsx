@@ -1,3 +1,4 @@
+"use client";
 import ContactMe from "@/components/Contact/ContactMe";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
@@ -31,8 +32,15 @@ const navItems = [
 ];
 
 export default function Home() {
+  const isClient = typeof window !== "undefined";
+
+  if (!isClient) return null;
+
   return (
-    <main className="relative bg-black-100 flex justify-center items-center sm:px-10 px-5 flex-col overflow-hidden mx-auto">
+    <main
+      id="main"
+      className="relative bg-black-100 flex justify-center items-center sm:px-10 px-5 flex-col overflow-hidden mx-auto"
+    >
       <div className="max-w-7xl w-full mb-10">
         <FloatingNav navItems={navItems}></FloatingNav>
         <Hero></Hero>

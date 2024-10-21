@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 
 import { BackgroundGradient } from "../ui/BackgroundGradient";
+import Image from "next/image";
 
 const Skills = () => {
   const container = useRef(null);
@@ -25,6 +26,9 @@ const Skills = () => {
       }
     );
   }, []);
+  const isClient = typeof window !== "undefined";
+
+  if (!isClient) return null;
   return (
     <div
       ref={container}
@@ -46,7 +50,9 @@ const Skills = () => {
               >
                 <div>
                   <div className="animated_box_border  ">
-                    <img
+                    <Image
+                      width={0}
+                      height={0}
                       src={item.src}
                       className=" w-[60px] aspect-square z-10 object-cover  text-white"
                       alt=""

@@ -38,6 +38,11 @@ export const FloatingNav = ({
     }
   });
 
+  // bug fix
+  const isClient = typeof window !== "undefined";
+
+  if (!isClient) return null;
+
   return (
     <div>
       <motion.div

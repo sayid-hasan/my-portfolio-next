@@ -1,12 +1,17 @@
+"use client";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import { BentoGrid } from "./ui/BentoGrid";
 import { gridItems } from "@/data";
+import { BentoGridItem } from "./ui/BentoGridItem";
 
 const Grid = () => {
+  const isClient = typeof window !== "undefined";
+
+  if (!isClient) return null;
   return (
     <section id="about">
-      <BentoGrid>
-        {gridItems.map(
+      <BentoGrid className="bg-transparent">
+        {gridItems?.map(
           ({
             id,
             title,
