@@ -31,7 +31,13 @@ const ProjectCard = ({
   return (
     <div className="project__card p-0 rounded-md bg-[#b4b9bc19] border-[1px] border-solid border-[#83868726] overflow-hidden flex items-stretch flex-col justify-between transition-all duration-300  font-oswald">
       <div className="picture">
-        <Image width={0} height={0} src={image} alt={title} />
+        <Image
+          width={500}
+          height={500}
+          className=" object-contain object-center"
+          src={image}
+          alt={title}
+        />
       </div>
       <div className="project__card__details flex-1 text-left p-4 flex justify-between flex-col">
         <div className="details__top border-none">

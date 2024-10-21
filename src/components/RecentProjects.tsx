@@ -25,13 +25,17 @@ const RecentProjects = () => {
     );
   }, []);
   return (
-    <div className="py-20 projects-container" id="projects" ref={container}>
+    <div
+      className="md:py-20 py-8 projects-container !my-0"
+      id="projects"
+      ref={container}
+    >
       <h1 className="heading">
         A small portion of my works <br />
         <span className="text-purple">Recent Projects</span>
       </h1>
       {/* cards container */}
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 relative  gap-5 mt-10 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 relative  gap-5 mt-10 p-2 md:p-4">
         {projects.map(({ title, image, data, stack, id }) => (
           <ProjectCard
             key={id}

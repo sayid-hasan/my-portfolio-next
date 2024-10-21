@@ -80,7 +80,7 @@ const Hero = () => {
 
   if (!isClient) return null;
   return (
-    <div className="pb-20 pt-36 " ref={container}>
+    <div className="md:pb-20 md:pt-36 py-10 " ref={container}>
       {/* SPOTLIGHT */}
       <Spotlight
         className="-top-40 -left-10 md:-top-20 md:-left-32 h-screen "

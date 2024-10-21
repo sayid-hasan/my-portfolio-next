@@ -33,7 +33,7 @@ const Skills = () => {
     <div
       ref={container}
       id="skill"
-      className="skills__container max-w-7xl mx-auto rounded-md font-oswald"
+      className="skills__container max-w-7xl mx-auto rounded-md font-oswald py-8"
     >
       <div className="flex justify-center">
         {" "}
