@@ -17,6 +17,7 @@ import profilePic from "../assets/images/Component 1.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
 // socila links
 const social = [
   {
@@ -122,13 +123,13 @@ const Hero = () => {
           {/* Download cv and projects button */}
           <div className="flex justify-between lg:w-full items-center gap-5">
             <div className="text-left flex   md:flex-row gap-5">
-              <a href="#project">
+              <Link href="/#projects">
                 <MagicButton
                   title={"show my work"}
                   icon={<FaLocationArrow />}
                   position="left"
                 ></MagicButton>
-              </a>
+              </Link>
               <a
                 href="https://docs.google.com/document/d/1krGrvW1JpOpXv7olJlCQBev0IY28UBf8zjeBOVaRR6Q/export?format=pdf"
                 download="syed_Hasan_CV.pdf"
