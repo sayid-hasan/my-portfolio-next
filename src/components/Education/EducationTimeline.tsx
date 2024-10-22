@@ -104,7 +104,7 @@ export function EducationTimeline() {
     },
   ];
   return (
-    <div className="w-fit relative my-10">
+    <div id="education" className="w-fit relative my-10">
       <Timeline data={data} />
     </div>
   );

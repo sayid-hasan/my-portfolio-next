@@ -13,6 +13,7 @@ import { GrTechnology } from "react-icons/gr";
 import { FcAbout } from "react-icons/fc";
 import { GoProjectSymlink } from "react-icons/go";
 import { EducationTimeline } from "@/components/Education/EducationTimeline";
+import { MdOutlineCastForEducation } from "react-icons/md";
 
 const navItems = [
   { name: "Home", link: "/", icon: <FaHome></FaHome> },
@@ -23,6 +24,11 @@ const navItems = [
     name: "Projects",
     link: "/#projects",
     icon: <GoProjectSymlink />,
+  },
+  {
+    name: "Education",
+    link: "/#education",
+    icon: <MdOutlineCastForEducation></MdOutlineCastForEducation>,
   },
 
   {

@@ -8,7 +8,9 @@ const menu = [
 
   { name: "Skill" },
   { name: "Projects" },
-
+  {
+    name: "Education",
+  },
   { name: "Contact" },
 ];
 const social = [
