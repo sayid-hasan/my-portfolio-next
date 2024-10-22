@@ -34,7 +34,7 @@ const ProjectCard = ({
         <Image
           width={500}
           height={500}
-          className=" object-contain object-center"
+          className=" object-contain object-center md:w-full"
           src={image}
           alt={title}
         />

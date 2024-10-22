@@ -12,6 +12,7 @@ import { BiSolidContact } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
 import { FcAbout } from "react-icons/fc";
 import { GoProjectSymlink } from "react-icons/go";
+import { EducationTimeline } from "@/components/Education/EducationTimeline";
 
 const navItems = [
   { name: "Home", link: "/", icon: <FaHome></FaHome> },
@@ -47,6 +48,8 @@ export default function Home() {
         <Grid />
         <RecentProjects />
         <Skills />
+        <EducationTimeline></EducationTimeline>
+
         <ContactMe />
         <Footer />
       </div>
