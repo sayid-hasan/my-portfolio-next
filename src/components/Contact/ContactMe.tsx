@@ -15,11 +15,11 @@ const ContactMe = () => {
   const [senderMessage, setSenderMessage] = useState("");
   const handleSendEmail = async (e: any) => {
     e.preventDefault();
-    console.log(process.env.VITE_SERVICE_ID);
+    console.log(process.env.NEXT_PUBLIC_VITE_SERVICE_ID);
     const data = {
-      service_id: process.env.VITE_SERVICE_ID,
-      template_id: process.env.VITE_TEMPLATE_ID,
-      user_id: process.env.VITE_PUBLIC_KEY,
+      service_id: process.env.NEXT_PUBLIC_VITE_SERVICE_ID,
+      template_id: process.env.NEXT_PUBLIC_VITE_TEMPLATE_ID,
+      user_id: process.env.NEXT_PUBLIC_VITE_PUBLIC_KEY,
       template_params: {
         from_name: senderName,
         to_name: "mohammad syed hasan",
